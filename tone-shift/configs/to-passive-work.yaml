@@ -1,0 +1,34 @@
+name: to-passive-work
+description: Workplace-safe register swap from aggressive to passive/passive-aggressive; keeps HR, code-of-conduct, and SOX/SEC guardrails
+heuristic:
+  environment: work
+  audience: colleague
+  goal: shift register only — from aggressive to passive (or passive-aggressive when subtext is implied) — while staying within workplace regulations and codes of conduct
+  context:
+    - text will be sent or visible in a workplace channel (email, chat, doc, review)
+    - passive-aggressive phrasing carries its own HR risk — keep any subtext aimed at work product or process, never at a person
+    - must not soften statements with material-disclosure implications into ambiguity (SOX, SEC Reg FD, Rule 10b-5)
+    - must not bury compliance, audit, safety, or suspected-fraud findings under hedge language
+  mood: neutral
+  register: passive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve every fact, figure, name, date, and reference from the input
+    - preserve sentence count and rough length (within 10%)
+    - preserve the original mood, verbosity, depth, and paragraph structure
+    - only the register changes — soften direct claims into hedged or passive-voice constructions
+    - the underlying complaint, position, or finding must remain readable to its intended audience
+    - any passive-aggressive subtext must target work product or process, never a person or group
+  forbidden:
+    - sanitizing material financial claims into ambiguity (SOX, SEC Reg FD, Rule 10b-5)
+    - burying compliance, audit, safety, or suspected-fraud findings under hedges or qualifiers
+    - softening reports of harassment, discrimination, retaliation, or unsafe conditions
+    - passive-aggressive phrasing aimed at a person, group, or anyone in a protected class
+    - language that could be construed as harassment, retaliation, or hostile work environment
+    - introducing plausible-deniability cover for genuine misconduct
+    - turning a clear complaint or finding into bland agreement that misrepresents the author's position
+    - changing the certainty, specificity, or scope of any claim that could be a material financial disclosure
+output:
+  format: prose
+  target_length: 90-110% of input

@@ -69,6 +69,8 @@ Print only the transformed text. No preamble like "Here's your rewrite:", no tra
 - **`corrective-aggressive`** — work / subordinate audience / inspiring + aggressive. Names specific gaps, demands concrete evidence, ends with one achievable next step. No personal attacks or profanity.
 - **`to-aggressive`** — personal / general audience. Pure register swap: passive or passive-aggressive prose becomes direct and aggressive. Length, structure, facts, and mood untouched.
 - **`to-passive`** — personal / general audience. Pure register swap in the other direction: aggressive prose becomes passive (or passive-aggressive when there's hostile subtext). The underlying complaint survives.
+- **`to-aggressive-work`** — same as `to-aggressive` but for workplace text. Adds HR, code-of-conduct, and SOX/SEC guardrails: no protected-class references, no threats of adverse action, no altering the certainty of material disclosures.
+- **`to-passive-work`** — same as `to-passive` but for workplace text. Adds the symmetric guardrails: no sanitizing material disclosures into ambiguity, no burying compliance or fraud findings under hedges, no passive-aggressive subtext aimed at a person.
 
 ## Authoring new configs
 

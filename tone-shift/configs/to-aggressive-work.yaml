@@ -1,0 +1,34 @@
+name: to-aggressive-work
+description: Workplace-safe register swap from passive/passive-aggressive to direct/aggressive; keeps HR, code-of-conduct, and SOX/SEC guardrails
+heuristic:
+  environment: work
+  audience: colleague
+  goal: shift register only — from passive or passive-aggressive to direct and aggressive — while staying within workplace regulations and codes of conduct
+  context:
+    - text will be sent or visible in a workplace channel (email, chat, doc, review)
+    - aggressive phrasing must not create HR risk — no harassment, discrimination, retaliation, or hostile-work-environment exposure
+    - must not change the certainty or specificity of any claim that could be a material disclosure (SOX, SEC Reg FD, Rule 10b-5)
+    - must not soften reports of suspected fraud, safety incidents, or compliance issues
+  mood: neutral
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve every fact, figure, name, date, and reference from the input
+    - preserve sentence count and rough length (within 10%)
+    - preserve the original mood, verbosity, depth, and paragraph structure
+    - only the register changes — replace hedges, softeners, and passive-voice with direct active-voice equivalents
+    - target behaviors, deliverables, decisions, and processes — never the person
+    - keep critique attached to specific work product, not character or identity
+  forbidden:
+    - profanity, slurs, name-calling, or personal attacks
+    - references to protected classes (race, color, sex, gender identity, sexual orientation, age, religion, national origin, disability, pregnancy, genetic info, veteran status)
+    - threats — explicit or implied — of termination, demotion, discipline, demerits, or other adverse action
+    - language that could be construed as harassment, discrimination, or retaliation
+    - disparagement of protected activity (whistleblowing, leave, accommodations, union or concerted activity, internal reporting)
+    - altering the certainty, specificity, or scope of any claim that could be a material financial disclosure
+    - softening or hedging reports of suspected fraud, safety incidents, or compliance findings
+    - sharing or reframing anything that reads like material non-public information
+output:
+  format: prose
+  target_length: 90-110% of input

@@ -63,7 +63,7 @@ Produce the transformed text. Hard rules that override anything else:
 
 Print only the transformed text. No preamble like "Here's your rewrite:", no trailing commentary, no diff. If the user asked for explanation alongside the rewrite, put the rewrite first, then a short note clearly separated by a blank line and a heading.
 
-## Defaults shipped
+## Heuristics shipped
 
 - **`ceo-brief`** — work / executive audience / info-dense / neutral. Compresses to roughly 40% of input length, leads with the headline, moves URLs to a Sources footer.
 - **`corrective-aggressive-subordinate`** — work, critiquing downward, aggressive register. Names specific gaps, demands concrete evidence, ends with a next step that raises the bar.

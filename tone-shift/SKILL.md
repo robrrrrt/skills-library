@@ -9,7 +9,7 @@ Rewrites a piece of text so its tone, style, and depth match a heuristic defined
 
 ## Invocation
 
-Three equivalent ways to invoke:
+Four ways to invoke:
 
 1. **Config + file path**
    ```
@@ -21,8 +21,9 @@ Three equivalent ways to invoke:
    ```
 3. **Free-form, in conversation**
    > "Apply tone-shift `ceo-brief` to this:" followed by the pasted text.
+4. **No config (discovery mode)** — provide input text without naming a heuristic. The skill reads all configs, analyzes the text, and presents the top matches as a multiple-choice prompt before rewriting.
 
-`<name>` is the basename of a file in `configs/` (without the `.yaml`). Run with no config to see what's available.
+`<name>` is the basename of a file in `configs/` (without the `.yaml`).
 
 ## Workflow
 
@@ -30,8 +31,24 @@ When invoked, follow these steps in order.
 
 ### 1. Resolve the config
 
+**If a config name was given:**
 - Look for `configs/<name>.yaml` inside this skill's directory.
-- If the requested config doesn't exist, list every `configs/*.yaml` basename and ask the user which one they meant. Do not invent a config or guess.
+- If it doesn't resolve, list every `configs/*.yaml` basename and ask the user which one they meant. Do not invent a config or guess.
+
+**If no config name was given (discovery mode):**
+- Load the input text first (see step 2). The text is what the suggestion is based on.
+- Read every `configs/*.yaml` — at minimum the `name`, `description`, and `heuristic` block (especially `environment`, `audience`, `register`, `mood`, and `context`).
+- Analyze the input along these axes:
+  - **Environment cues** — workplace markers (deadlines, deliverables, leadership, teams, formal channels) vs personal markers (friends, family, relationships, casual channels).
+  - **Audience cues** — addressed downward (subordinate, report), upward (boss, exec, leadership), or peer/general; named recipients; tone of address.
+  - **Current register** — passive, passive-aggressive, neutral, formal, aggressive.
+  - **Intent signals** — is this feedback / correction with a gap to name (favors `corrective-*`), or general prose where only register needs to shift (favors `general-*`)?
+- Rank configs by relevance and present the top 3 as a numbered multiple-choice question. For each option include a one-line "matches because…" reason citing specific cues from the text and config. Add a final option ("see all configs") so the user can override the suggestion.
+- Wait for the user to pick before continuing. Do not start rewriting on your own guess.
+
+**Fallbacks for discovery mode:**
+- If the input is too short or empty to analyze, skip the suggestion and list all configs with their one-line descriptions.
+- If no config is a plausible match (e.g., the text is about a domain none of the configs are tuned for), say so and list all configs rather than forcing a top 3.
 
 ### 2. Load the input text
 

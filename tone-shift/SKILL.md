@@ -66,7 +66,10 @@ Print only the transformed text. No preamble like "Here's your rewrite:", no tra
 ## Defaults shipped
 
 - **`ceo-brief`** — work / executive audience / info-dense / neutral. Compresses to roughly 40% of input length, leads with the headline, moves URLs to a Sources footer.
-- **`corrective-aggressive`** — work / subordinate audience / inspiring + aggressive. Names specific gaps, demands concrete evidence, ends with one achievable next step. No personal attacks or profanity.
+- **`corrective-aggressive-subordinate`** — work, critiquing downward, aggressive register. Names specific gaps, demands concrete evidence, ends with a next step that raises the bar.
+- **`corrective-aggressive-superior`** — work, pushing back upward, aggressive register. Cites concrete impact and risk, proposes an alternative or decision-forcing question, closes with a clear ask. Confident professional dissent, not insubordination.
+- **`corrective-passive-subordinate`** — work, critiquing downward, hedged/indirect register. Frames critique as observation or question; passive-aggressive subtext allowed when the message must land, never aimed at the person.
+- **`corrective-passive-superior`** — work, pushing back upward, hedged/indirect register. Frames concerns as questions or curiosity; passive-aggressive subtext allowed when the concern must register, never aimed at the recipient.
 - **`to-aggressive`** — personal / general audience. Pure register swap: passive or passive-aggressive prose becomes direct and aggressive. Length, structure, facts, and mood untouched.
 - **`to-passive`** — personal / general audience. Pure register swap in the other direction: aggressive prose becomes passive (or passive-aggressive when there's hostile subtext). The underlying complaint survives.
 - **`to-aggressive-work`** — same as `to-aggressive` but for workplace text. Adds HR, code-of-conduct, and SOX/SEC guardrails: no protected-class references, no threats of adverse action, no altering the certainty of material disclosures.

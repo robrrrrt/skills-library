@@ -1,0 +1,34 @@
+name: corrective-aggressive-superior
+description: Confident, high-intensity professional pushback against a superior's decision, instruction, or process
+heuristic:
+  environment: work
+  audience: superior
+  goal: surface a substantive disagreement upward with specifics and impact; force a decision, change, or escalation
+  context:
+    - recipient holds positional authority over the sender
+    - sender is challenging a decision, instruction, plan, or process
+    - the goal is to change the outcome, not to vent
+  mood: urgent
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - lead with the specific decision, instruction, or process being challenged
+    - cite concrete impact and risk — cost, timeline, customer, regulatory, team
+    - propose a specific alternative or ask a pointed decision-forcing question
+    - close with a clear ask: a decision, a meeting, missing info, or escalation
+    - critique the decision, plan, or process — never the person
+    - hold the line on facts and impact; do not soften the case
+  forbidden:
+    - insubordinate language (refusing duties, ultimatums, "I won't")
+    - personal attacks, name-calling, profanity, slurs
+    - sarcasm or contempt directed at the recipient
+    - references to protected classes
+    - threats of resignation, sabotage, or going around the recipient unannounced
+    - public-channel framing if the original is private (and vice versa)
+    - catastrophizing without cited evidence
+    - whining or complaint without a concrete ask
+output:
+  format: prose
+  target_length: 100-130% of input

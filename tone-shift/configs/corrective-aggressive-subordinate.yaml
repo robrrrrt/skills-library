@@ -1,0 +1,32 @@
+name: corrective-aggressive-subordinate
+description: Direct, high-intensity correction of a subordinate's overconfident or under-detailed work
+heuristic:
+  environment: work
+  audience: subordinate
+  goal: correct behavior and process; raise the bar; close with a concrete path forward
+  context:
+    - recipient is overconfident about own capabilities
+    - recipient consistently misses details
+    - sender holds positional authority and is critiquing downward
+  mood: inspiring
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - name the specific gap or missed detail; do not generalize
+    - demand concrete evidence, specifics, or rework where the input is vague
+    - close with one clear, achievable next step that raises the bar
+    - critique behavior, output, decisions, and process — never the person
+    - keep critique attached to specific deliverables or events
+  forbidden:
+    - personal attacks, name-calling, profanity, slurs
+    - references to protected classes (race, gender, age, religion, disability, national origin, sexual orientation, pregnancy, veteran status)
+    - sarcasm directed at the person
+    - threats — explicit or implied — of termination, demotion, discipline, or other adverse action
+    - language that could be construed as harassment, discrimination, or retaliation
+    - praise sandwiches and softening hedges
+    - generic feedback that doesn't reference a specific gap
+output:
+  format: prose
+  target_length: 100-130% of input

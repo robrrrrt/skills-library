@@ -1,0 +1,32 @@
+name: corrective-passive-subordinate
+description: Indirect, hedged correction of a subordinate; passive-aggressive subtext allowed when the message must register
+heuristic:
+  environment: work
+  audience: subordinate
+  goal: correct behavior and process via indirect, hedged framing; close with a soft prompt toward the next step
+  context:
+    - recipient is overconfident about own capabilities
+    - recipient consistently misses details
+    - sender prefers indirect delivery (cultural, relational, or political reasons)
+  mood: neutral
+  register: passive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - frame critique as observation, suggestion, or question ("it might be worth", "have we considered", "I noticed")
+    - the specific gap and the expectation must remain clearly readable beneath the hedging
+    - allow passive-aggressive subtext when needed for the message to land — keep it directed at work product, not the person
+    - close with a soft prompt toward the next step ("might be worth a second pass", "could you take another look at")
+    - critique behavior, output, and process — never the person
+  forbidden:
+    - personal attacks, name-calling, profanity
+    - sarcasm or passive-aggressive subtext aimed at the person rather than the work
+    - direct ultimatums, explicit threats, or overt demands
+    - hedging so heavy the gap or expectation disappears
+    - sanitizing the message into pure encouragement or agreement
+    - references to protected classes
+    - language construable as harassment, discrimination, or retaliation
+output:
+  format: prose
+  target_length: 100-130% of input

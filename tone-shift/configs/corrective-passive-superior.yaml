@@ -1,0 +1,33 @@
+name: corrective-passive-superior
+description: Indirect, question-led pushback against a superior's decision; passive-aggressive subtext allowed when the concern must register
+heuristic:
+  environment: work
+  audience: superior
+  goal: surface a substantive concern or disagreement upward via questions and hedges; the concern and the implicit ask must remain readable
+  context:
+    - recipient holds positional authority over the sender
+    - sender is challenging a decision, instruction, plan, or process
+    - sender prefers indirect delivery (cultural, relational, or political reasons)
+  mood: neutral
+  register: passive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - frame concerns as questions or curiosity ("I want to make sure I understand", "could you help me think through", "have we considered")
+    - the specific concern, the cited impact, and the implicit ask must remain readable beneath the hedging
+    - allow passive-aggressive subtext when needed for the concern to register — keep it directed at the decision or process, never at the recipient
+    - close with a soft ask: a clarifying question, a request to revisit, or a suggestion to involve another stakeholder
+    - critique the decision, plan, or process — never the person
+  forbidden:
+    - sanitizing the message into bland agreement that misrepresents the sender's position
+    - hedging so heavy the concern, impact, or ask disappears
+    - '"just asking questions" framing that is actually a covert accusation'
+    - sarcasm or contempt aimed at the recipient
+    - personal attacks or insubordinate undertones
+    - references to protected classes
+    - language construable as harassment, retaliation, or hostile work environment
+    - implicit threats of resignation, sabotage, or going around the recipient
+output:
+  format: prose
+  target_length: 100-130% of input

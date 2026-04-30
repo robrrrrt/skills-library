@@ -1,0 +1,28 @@
+name: corrective-aggressive
+description: Direct, high-intensity correction of overconfident, under-detailed work
+heuristic:
+  environment: work
+  audience: subordinate
+  goal: correct behavior and process; raise the bar; close with a concrete path forward
+  context:
+    - recipient is overconfident about own capabilities
+    - recipient consistently misses details
+  mood: inspiring
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - name the specific gap or missed detail; do not generalize
+    - demand concrete evidence or specifics where the input is vague
+    - close with one clear, achievable next step that raises the bar
+    - critique behavior and output, never the person
+  forbidden:
+    - personal attacks, name-calling, profanity
+    - sarcasm directed at the person
+    - vague threats or ultimatums
+    - praise sandwiches and softening hedges
+    - generic feedback that doesn't reference a specific gap
+output:
+  format: prose
+  target_length: 100-130% of input

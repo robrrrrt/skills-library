@@ -1,0 +1,24 @@
+name: ceo-brief
+description: Compress for an executive reader; keep facts; link sources at bottom
+heuristic:
+  environment: work
+  audience: ceo
+  goal: maximize information density; surface decisions and asks; move citations and links to a footer
+  mood: neutral
+  register: formal
+  verbosity: terse
+  depth: surface
+  constraints:
+    - preserve all facts, figures, names, and dates
+    - lead with the decision, ask, or headline finding
+    - cut hedges, throat-clearing, and meta-commentary
+    - prefer concrete nouns and active voice
+    - move every URL to a "Sources" footer at the bottom; reference them inline only by short label
+  forbidden:
+    - speculative framing such as "it seems" or "perhaps"
+    - apologetic or self-deprecating openings
+    - inline URLs in body prose
+    - filler adverbs (very, really, quite, basically)
+output:
+  format: prose-with-citations-footer
+  target_length: ~40% of input

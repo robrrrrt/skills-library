@@ -1,4 +1,4 @@
-name: to-aggressive-personal
+name: general-aggressive-personal
 description: Shift passive or passive-aggressive prose into a direct, aggressive register; change nothing else
 heuristic:
   environment: personal

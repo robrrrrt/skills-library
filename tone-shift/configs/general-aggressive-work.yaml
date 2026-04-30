@@ -1,4 +1,4 @@
-name: to-aggressive-work
+name: general-aggressive-work
 description: Workplace-safe register swap from passive/passive-aggressive to direct/aggressive; keeps HR, code-of-conduct, and SOX/SEC guardrails
 heuristic:
   environment: work

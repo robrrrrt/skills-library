@@ -1,4 +1,4 @@
-name: to-passive-work
+name: general-passive-work
 description: Workplace-safe register swap from aggressive to passive/passive-aggressive; keeps HR, code-of-conduct, and SOX/SEC guardrails
 heuristic:
   environment: work

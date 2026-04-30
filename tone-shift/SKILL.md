@@ -70,11 +70,13 @@ Print only the transformed text. No preamble like "Here's your rewrite:", no tra
 - **`corrective-aggressive-superior`** — work, pushing back upward, aggressive register. Cites concrete impact and risk, proposes an alternative or decision-forcing question, closes with a clear ask. Confident professional dissent, not insubordination.
 - **`corrective-passive-subordinate`** — work, critiquing downward, hedged/indirect register. Frames critique as observation or question; passive-aggressive subtext allowed when the message must land, never aimed at the person.
 - **`corrective-passive-superior`** — work, pushing back upward, hedged/indirect register. Frames concerns as questions or curiosity; passive-aggressive subtext allowed when the concern must register, never aimed at the recipient.
-- **`to-aggressive`** — personal / general audience. Pure register swap: passive or passive-aggressive prose becomes direct and aggressive. Length, structure, facts, and mood untouched.
-- **`to-passive`** — personal / general audience. Pure register swap in the other direction: aggressive prose becomes passive (or passive-aggressive when there's hostile subtext). The underlying complaint survives.
-- **`to-aggressive-work`** — same as `to-aggressive` but for workplace text. Adds HR, code-of-conduct, and SOX/SEC guardrails: no protected-class references, no threats of adverse action, no altering the certainty of material disclosures.
-- **`to-passive-work`** — same as `to-passive` but for workplace text. Adds the symmetric guardrails: no sanitizing material disclosures into ambiguity, no burying compliance or fraud findings under hedges, no passive-aggressive subtext aimed at a person.
+- **`to-aggressive-personal`** — personal context, register-only swap. Passive or passive-aggressive prose becomes direct and aggressive. Length, structure, facts, and mood untouched.
+- **`to-aggressive-work`** — same swap, workplace context. Adds HR, code-of-conduct, and SOX/SEC guardrails: no protected-class references, no threats of adverse action, no altering the certainty of material disclosures.
+- **`to-passive-personal`** — personal context, register-only swap in the other direction. Aggressive prose becomes passive (or passive-aggressive when there's hostile subtext). The underlying complaint survives.
+- **`to-passive-work`** — same swap, workplace context. Adds the symmetric guardrails: no sanitizing material disclosures into ambiguity, no burying compliance or fraud findings under hedges, no passive-aggressive subtext aimed at a person.
+
+The configs follow a pattern: `<intent>-<register>-<distinguisher>`. For the `corrective-*` family the distinguisher is audience (subordinate or superior; environment is implicitly work). For the `to-*` family the distinguisher is environment (personal or work; audience is implicitly general).
 
 ## Authoring new configs
 
-Drop a `<name>.yaml` into `configs/`. See `SCHEMA.md` for every field and its allowed values, and use the two defaults as templates. Configs are pure data — adding one requires no change to this skill.
+Drop a `<name>.yaml` into `configs/`. See `SCHEMA.md` for every field and its allowed values, and use any of the shipped defaults as a template. Configs are pure data — adding one requires no change to this skill.

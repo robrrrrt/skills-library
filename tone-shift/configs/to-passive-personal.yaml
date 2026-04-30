@@ -1,4 +1,4 @@
-name: to-passive
+name: to-passive-personal
 description: Shift aggressive prose into a passive or passive-aggressive register; change nothing else
 heuristic:
   environment: personal

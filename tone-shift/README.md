@@ -1,32 +1,27 @@
 # tone-shift
 
-A configurable rewrite skill that changes **tone, style, and depth** while preserving all source facts.
+`tone-shift` rewrites text for a target audience and communication style using a YAML config, while preserving every source fact.
 
-This skill applies a named YAML heuristic from `configs/` and rewrites input text to match the target audience and communication goals.
+## Purpose
 
-## What it does
+Use this skill when you need to change **how** something is said (tone, register, structure, depth) without changing **what** is said (claims, numbers, dates, names, or quotes).
 
-- Rewrites wording, structure, and emphasis to match a target voice.
-- Preserves factual content (claims, names, numbers, dates, and direct quotes).
-- Enforces config-defined requirements (`constraints`) and prohibitions (`forbidden`).
-- Supports multiple communication contexts (work/personal), audiences, and registers.
+## Invocation
 
-## Usage
-
-From the skill directory, invoke in any of these ways:
+You can invoke `tone-shift` in three equivalent ways:
 
 ```bash
 tone-shift --config <name> --input <path>
 cat <path> | tone-shift --config <name>
 ```
 
-Or in chat:
+Or in conversation:
 
 > Apply tone-shift `ceo-brief` to this: ...
 
-If you run without a config, the skill should list available config names.
+`<name>` maps to `configs/<name>.yaml`.
 
-## Available configs
+## Built-in configs
 
 - `ceo-brief`
 - `corrective-aggressive-subordinate`
@@ -38,28 +33,30 @@ If you run without a config, the skill should list available config names.
 - `general-passive-personal`
 - `general-passive-work`
 
-## Config model
+## Rewrite contract
 
-Each config is a YAML file with:
+When applying this skill:
 
-- Top-level metadata (`name`, `description`)
-- `heuristic` (environment, audience, mood, register, verbosity, depth, constraints/forbidden)
-- `output` (format and optional length target)
+- Preserve all factual content from the source.
+- Follow every `heuristic.constraints` rule.
+- Honor every `heuristic.forbidden` rule.
+- Do not invent citations, sources, or URLs.
+- Emit transformed text only (unless the user explicitly requests explanation).
 
-See `SCHEMA.md` for full field definitions and examples.
+## Config structure
 
-## Safety and fidelity rules
+Each YAML config contains:
 
-- Never change the underlying facts.
-- Never invent citations or URLs.
-- `forbidden` rules override stylistic instincts.
-- `constraints` must all be followed.
-- Output should be the transformed text only (unless explanation is explicitly requested).
+- `name` and `description`
+- `heuristic` (environment, audience, goal, mood, register, verbosity, depth, constraints, forbidden)
+- `output` (format and optional target length)
 
-## Add a new config
+See [`SCHEMA.md`](./SCHEMA.md) for full field-level documentation.
 
-1. Copy an existing YAML file in `configs/`.
-2. Update fields for your target communication style.
-3. Save as `<name>.yaml`.
+## Adding a config
 
-No code changes are required to add configs.
+1. Copy an existing file in `configs/`.
+2. Adjust fields to match the desired behavior.
+3. Save as `<new-name>.yaml`.
+
+No code changes are required to add new configs.

@@ -25,7 +25,7 @@ If you provide text without naming a config, the skill enters **discovery mode**
 
 ## Built-in configs
 
-Names follow `<intent>-<register>-<distinguisher>`. `corrective-*` is for feedback that names gaps and pushes for change (distinguisher: audience). `general-*` is a register-only swap on any text (distinguisher: environment). `ceo-brief` is a one-off goal-named config.
+Names follow `<intent>-<register>-<distinguisher>`. `corrective-*` is for feedback that names gaps and pushes for change (distinguisher: audience). `general-*` is a register-only swap on any text (distinguisher: environment). `ceo-brief` and `slack-compact` are one-off goal-named configs.
 
 - `ceo-brief`
 - `corrective-aggressive-subordinate`
@@ -36,6 +36,7 @@ Names follow `<intent>-<register>-<distinguisher>`. `corrective-*` is for feedba
 - `general-aggressive-work`
 - `general-passive-personal`
 - `general-passive-work`
+- `slack-compact` — compress email-length prose to 1-2 Slack messages while preserving the source's tone, register, mood, and voice exactly. Cut-only — nothing is rewritten, only removed.
 
 The `*-work` and `corrective-*` configs include HR / code-of-conduct guardrails (no protected-class references, no threats of adverse action). The `general-*-work` pair adds SOX/SEC guardrails to keep material disclosures intact.
 

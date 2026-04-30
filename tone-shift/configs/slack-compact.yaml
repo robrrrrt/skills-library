@@ -1,0 +1,34 @@
+name: slack-compact
+description: Compress email-length prose to 1-2 Slack messages while preserving the source's tone, register, mood, and voice exactly; only cut, never change how things are said
+heuristic:
+  environment: work
+  audience: slack reader
+  goal: shorten to 1-2 Slack messages by removing unnecessary, redundant, or irrelevant content; do not change the tone, register, mood, voice, or perspective of the source
+  context:
+    - input is typically email-length prose (~150-1000+ words)
+    - output is a Slack message — roughly 50-150 words across 1-2 messages, optionally split into two paragraphs if there is a natural break
+    - reader will skim on Slack
+  mood: neutral
+  register: casual
+  verbosity: terse
+  depth: surface
+  constraints:
+    - the mood and register fields above are placeholders; preserve the source's actual mood, register, voice, and emotional coloring exactly
+    - preserve every fact, figure, name, date, link, and direct quote from the input
+    - keep the headline, decision, ask, or key finding from the source — that is what survives compression
+    - cut only what is unnecessary — pleasantries, sign-offs, throat-clearing, restated points, redundant context, tangential details, walk-throughs of obvious reasoning
+    - if the source contains explicit asks or questions, preserve them verbatim or near-verbatim
+    - if the source has multiple distinct points, keep them in the source's order
+    - target 50-150 words total; use two paragraphs (two Slack messages) only when the content has a natural break
+    - bullets are acceptable when the source uses them or when the content is genuinely a list; otherwise prose
+  forbidden:
+    - changing the source's tone, register, voice, or mood (no shifting formal→casual, neutral→aggressive, etc.)
+    - rewriting for a different audience than the source's intended one
+    - adding new content, framing, emphasis, or transitions not present in or implied by the source
+    - oversimplifying technical content to the point of inaccuracy
+    - merging distinct points if doing so loses information
+    - inventing summary lines or TL;DR framings the source did not have
+    - dropping the original ask or decision in favor of context
+output:
+  format: prose (bullets ok when the source uses them or when the content is a list)
+  target_length: 50-150 words (1-2 Slack messages)

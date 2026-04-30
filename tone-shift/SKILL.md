@@ -67,6 +67,8 @@ Print only the transformed text. No preamble like "Here's your rewrite:", no tra
 
 - **`ceo-brief`** — work / executive audience / info-dense / neutral. Compresses to roughly 40% of input length, leads with the headline, moves URLs to a Sources footer.
 - **`corrective-aggressive`** — work / subordinate audience / inspiring + aggressive. Names specific gaps, demands concrete evidence, ends with one achievable next step. No personal attacks or profanity.
+- **`to-aggressive`** — personal / general audience. Pure register swap: passive or passive-aggressive prose becomes direct and aggressive. Length, structure, facts, and mood untouched.
+- **`to-passive`** — personal / general audience. Pure register swap in the other direction: aggressive prose becomes passive (or passive-aggressive when there's hostile subtext). The underlying complaint survives.
 
 ## Authoring new configs
 

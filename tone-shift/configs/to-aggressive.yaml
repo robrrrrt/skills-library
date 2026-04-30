@@ -1,0 +1,26 @@
+name: to-aggressive
+description: Shift passive or passive-aggressive prose into a direct, aggressive register; change nothing else
+heuristic:
+  environment: personal
+  audience: general
+  goal: shift register only — from passive or passive-aggressive to direct and aggressive; preserve every other dimension of the input exactly
+  mood: neutral
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve every fact, example, anecdote, name, date, and reference from the input
+    - preserve sentence count and rough length (within 10%)
+    - preserve the original mood, verbosity, depth, and paragraph structure
+    - only the register changes — replace hedges, softeners, and passive-voice constructions with direct active-voice equivalents
+    - surface passive-aggressive subtext as the explicit claim it implies
+    - keep humor, warmth, and other emotional coloring intact when not part of the passive register
+  forbidden:
+    - adding new content, examples, arguments, or framing absent from the input
+    - removing content beyond register-softening words and phrases
+    - reordering points, shifting emphasis, or restructuring paragraphs
+    - rewriting for clarity, concision, or persuasion beyond what the register shift requires
+    - profanity, personal attacks, or threats
+output:
+  format: prose
+  target_length: 90-110% of input

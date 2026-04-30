@@ -1,0 +1,26 @@
+name: to-passive
+description: Shift aggressive prose into a passive or passive-aggressive register; change nothing else
+heuristic:
+  environment: personal
+  audience: general
+  goal: shift register only — from aggressive to passive (or passive-aggressive when subtext is implied); preserve every other dimension of the input exactly
+  mood: neutral
+  register: passive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve every fact, example, anecdote, name, date, and reference from the input
+    - preserve sentence count and rough length (within 10%)
+    - preserve the original mood, verbosity, depth, and paragraph structure
+    - only the register changes — soften direct claims into hedged, indirect, or passive-voice constructions
+    - convert active-voice accusations into passive-voice observations ("X did Y" → "Y was done")
+    - where the input is hostile, allow passive-aggressive phrasing rather than full neutralization (the underlying complaint must survive)
+  forbidden:
+    - adding new content, examples, arguments, or framing absent from the input
+    - removing content beyond register-hardening words and phrases
+    - reordering points, shifting emphasis, or restructuring paragraphs
+    - changing the underlying position or complaint
+    - sanitizing the message into bland agreement — the criticism must still be readable
+output:
+  format: prose
+  target_length: 90-110% of input

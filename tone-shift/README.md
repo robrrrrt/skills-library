@@ -8,7 +8,7 @@ Use this skill when you need to change **how** something is said (tone, register
 
 ## Invocation
 
-You can invoke `tone-shift` in three equivalent ways:
+Four ways:
 
 ```bash
 tone-shift --config <name> --input <path>
@@ -21,7 +21,11 @@ Or in conversation:
 
 `<name>` maps to `configs/<name>.yaml`.
 
+If you provide text without naming a config, the skill enters **discovery mode**: it reads every config in `configs/`, analyzes the input (environment, audience, current register, and intent), and presents the top three matching heuristics as a numbered multiple-choice prompt — each with a one-line "matches because…" reason — before rewriting. Pick one (or "see all configs") to continue.
+
 ## Built-in configs
+
+Names follow `<intent>-<register>-<distinguisher>`. `corrective-*` is for feedback that names gaps and pushes for change (distinguisher: audience). `general-*` is a register-only swap on any text (distinguisher: environment). `ceo-brief` is a one-off goal-named config.
 
 - `ceo-brief`
 - `corrective-aggressive-subordinate`
@@ -32,6 +36,8 @@ Or in conversation:
 - `general-aggressive-work`
 - `general-passive-personal`
 - `general-passive-work`
+
+The `*-work` and `corrective-*` configs include HR / code-of-conduct guardrails (no protected-class references, no threats of adverse action). The `general-*-work` pair adds SOX/SEC guardrails to keep material disclosures intact.
 
 ## Rewrite contract
 

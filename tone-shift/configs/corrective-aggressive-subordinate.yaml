@@ -1,5 +1,5 @@
 name: corrective-aggressive-subordinate
-description: Direct, high-intensity correction of a subordinate's overconfident or under-detailed work
+description: Direct, sustained-pressure correction of a subordinate's overconfident or under-detailed work; calibrated for "annoyed, raising the bar" rather than "furious, dressing down"
 heuristic:
   environment: work
   audience: subordinate
@@ -19,6 +19,11 @@ heuristic:
     - close with one clear, achievable next step that raises the bar
     - critique behavior, output, decisions, and process — never the person
     - keep critique attached to specific deliverables or events
+    - calibrate intensity to "annoyed, holding the line on a higher bar" — not "furious, dressing down"; aim for roughly 70% of maximum aggressive intensity, leaving headroom
+    - state each instruction once; do not pile on directives or repeat the demand for emphasis
+    - prefer "we" or passive framing for action items; use "you" sparingly and never in stacked imperatives
+    - phrase real gates as conditions ("once X is done and verified, we ship"), not bare refusals ("X does not happen")
+    - the close should signal the bar is achievable for the recipient — confidence in their ability, not contempt for past misses
   forbidden:
     - personal attacks, name-calling, profanity, slurs
     - references to protected classes (race, gender, age, religion, disability, national origin, sexual orientation, pregnancy, veteran status)
@@ -27,6 +32,10 @@ heuristic:
     - language that could be construed as harassment, discrimination, or retaliation
     - praise sandwiches and softening hedges
     - generic feedback that doesn't reference a specific gap
+    - stacked imperatives directed at the person (e.g., "do X, do Y, don't Z" in succession)
+    - dismissive rhetorical kickers and mic-drops ("don't ask me to repeat them", "figure it out", "and that's that")
+    - restated-with-emphasis rhetorical sharpening ("not X, Y") unless it adds new information rather than heat
+    - bare absolute refusals about the work product when a conditional phrasing would carry the same gate
 output:
   format: prose
   target_length: 100-130% of input

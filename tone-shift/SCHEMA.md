@@ -2,6 +2,8 @@
 
 Every config in `configs/` is a YAML file with this shape. Required fields are marked. Free-form fields accept any string; enumerated fields list the recognized values — Claude will follow values outside the enum but the canonical ones are tested against the defaults.
 
+**Omitting an optional `heuristic` field means "preserve the source's value for this dimension."** Claude does not invent a default. Use this when you want a config that, e.g., shifts only register but leaves mood, verbosity, and depth untouched.
+
 ## Top-level
 
 | Field | Required | Type | Notes |
@@ -19,10 +21,10 @@ Every config in `configs/` is a YAML file with this shape. Required fields are m
 | `audience` | yes | string | free-form (e.g., `ceo`, `subordinate`, `peer`, `customer`, `general public`) | Who's reading. |
 | `goal` | yes | string | free-form prose | What the rewrite should accomplish. |
 | `context` | no | list of strings | free-form | Situational facts about the recipient. Used to shape emphasis, not to change source facts. |
-| `mood` | yes | string | `neutral`, `urgent`, `inspiring`, `warm`, `somber` | Emotional valence. |
-| `register` | yes | string | `formal`, `casual`, `aggressive`, `deferential` | Social formality and intensity. Orthogonal to `mood`. |
-| `verbosity` | yes | string | `terse`, `standard`, `expansive` | How much prose. |
-| `depth` | yes | string | `surface`, `detailed`, `exhaustive` | How much analysis or detail. |
+| `mood` | no | string | `neutral`, `urgent`, `inspiring`, `warm`, `somber` | Emotional valence. **Omit to preserve the source's mood.** |
+| `register` | no | string | `formal`, `casual`, `aggressive`, `deferential` | Social formality and intensity. Orthogonal to `mood`. **Omit to preserve the source's register.** |
+| `verbosity` | no | string | `terse`, `standard`, `expansive` | How much prose. **Omit to preserve the source's verbosity.** |
+| `depth` | no | string | `surface`, `detailed`, `exhaustive` | How much analysis or detail. **Omit to preserve the source's depth.** |
 | `constraints` | yes | list of strings | free-form rules | Must-do. Apply every one. |
 | `forbidden` | no | list of strings | free-form rules | Must-not-do. Honor every one. Overrides instincts. |
 

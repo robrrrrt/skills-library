@@ -8,12 +8,7 @@ heuristic:
     - input is typically email-length prose (~150-1000+ words)
     - output is a Slack message — roughly 50-150 words across 1-2 messages, optionally split into two paragraphs if there is a natural break
     - reader will skim on Slack
-  mood: neutral
-  register: casual
-  verbosity: terse
-  depth: surface
   constraints:
-    - the mood and register fields above are placeholders; preserve the source's actual mood, register, voice, and emotional coloring exactly
     - preserve every fact, figure, name, date, link, and direct quote from the input
     - keep the headline, decision, ask, or key finding from the source — that is what survives compression
     - cut only what is unnecessary — pleasantries, sign-offs, throat-clearing, restated points, redundant context, tangential details, walk-throughs of obvious reasoning

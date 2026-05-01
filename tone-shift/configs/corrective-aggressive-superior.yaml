@@ -1,5 +1,5 @@
 name: corrective-aggressive-superior
-description: Confident, high-intensity professional pushback against a superior's decision, instruction, or process
+description: Confident, sustained-pressure professional pushback against a superior's decision, instruction, or process; calibrated for "firm, demanding resolution" rather than "hostile or insubordinate"
 heuristic:
   environment: work
   audience: superior
@@ -20,6 +20,8 @@ heuristic:
     - close with a clear ask: a decision, a meeting, missing info, or escalation
     - critique the decision, plan, or process — never the person
     - hold the line on facts and impact; do not soften the case
+    - calibrate intensity to "firm professional pushback that demands a decision" — not "hostile, insubordinate, or contemptuous"; aim for roughly 70% of maximum aggressive intensity, leaving headroom
+    - state each concern, ask, or proposed alternative once; do not pile on or repeat for emphasis
   forbidden:
     - insubordinate language (refusing duties, ultimatums, "I won't")
     - personal attacks, name-calling, profanity, slurs
@@ -29,6 +31,9 @@ heuristic:
     - public-channel framing if the original is private (and vice versa)
     - catastrophizing without cited evidence
     - whining or complaint without a concrete ask
+    - stacked imperatives or demands directed at the recipient (e.g., "decide X, fix Y, change Z" in succession)
+    - dismissive rhetorical kickers and mic-drops ("figure it out", "we'll see", "but that's just my opinion")
+    - restated-with-emphasis rhetorical sharpening ("not X, Y") unless it adds new information rather than heat
 output:
   format: prose
   target_length: 100-130% of input

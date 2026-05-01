@@ -1,5 +1,5 @@
 name: corrective-passive-subordinate
-description: Indirect, hedged correction of a subordinate; passive-aggressive subtext allowed when the message must register
+description: Indirect, hedged correction of a subordinate; passive-aggressive subtext allowed when the message must register; calibrated for "indirect but pointed" rather than "soft enough to vanish or veiled hostility"
 heuristic:
   environment: work
   audience: subordinate
@@ -19,6 +19,8 @@ heuristic:
     - allow passive-aggressive subtext when needed for the message to land — keep it directed at work product, not the person
     - close with a soft prompt toward the next step ("might be worth a second pass", "could you take another look at")
     - critique behavior, output, and process — never the person
+    - calibrate hedge intensity to "indirect but pointed" — neither so soft the critique disappears, nor so heavy with passive-aggressive subtext that it reads as veiled hostility; the gap and expectation must be readable on first pass
+    - state each observation or suggestion once; do not pile on hedged restatements of the same point
   forbidden:
     - personal attacks, name-calling, profanity
     - sarcasm or passive-aggressive subtext aimed at the person rather than the work
@@ -27,6 +29,10 @@ heuristic:
     - sanitizing the message into pure encouragement or agreement
     - references to protected classes
     - language construable as harassment, discrimination, or retaliation
+    - stacked passive-aggressive subtext targeting the same point repeatedly
+    - dismissive sign-offs ("anyway", "do with this what you will", "just thought I'd flag it")
+    - meta-hedges on already-hedged statements ("perhaps it might possibly be worth considering")
+    - contrasted-restatement passive-aggressive sharpening ("I'm not asking X, I'm asking Y") that adds friction without information
 output:
   format: prose
   target_length: 100-130% of input

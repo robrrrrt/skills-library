@@ -1,5 +1,5 @@
 name: corrective-passive-superior
-description: Indirect, question-led pushback against a superior's decision; passive-aggressive subtext allowed when the concern must register
+description: Indirect, question-led pushback against a superior's decision; passive-aggressive subtext allowed when the concern must register; calibrated for "questioning but anchored" rather than "deferential to the point of disappearing or covertly accusatory"
 heuristic:
   environment: work
   audience: superior
@@ -19,6 +19,8 @@ heuristic:
     - allow passive-aggressive subtext when needed for the concern to register — keep it directed at the decision or process, never at the recipient
     - close with a soft ask: a clarifying question, a request to revisit, or a suggestion to involve another stakeholder
     - critique the decision, plan, or process — never the person
+    - calibrate hedge intensity to "questioning but anchored" — neither so deferential the concern disappears, nor so heavy with passive-aggressive subtext that it reads as covert accusation; the concern, impact, and ask must be readable on first pass
+    - state each concern or question once; do not pile on hedged restatements of the same point
   forbidden:
     - sanitizing the message into bland agreement that misrepresents the sender's position
     - hedging so heavy the concern, impact, or ask disappears
@@ -28,6 +30,9 @@ heuristic:
     - references to protected classes
     - language construable as harassment, retaliation, or hostile work environment
     - implicit threats of resignation, sabotage, or going around the recipient
+    - stacked rhetorical questions all hammering the same concern
+    - dismissive sign-offs ("anyway", "ignore me if I'm off base", "just thinking out loud")
+    - meta-hedges on already-hedged statements ("perhaps it might possibly be worth considering")
 output:
   format: prose
   target_length: 100-130% of input

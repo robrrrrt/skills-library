@@ -46,6 +46,8 @@ After the config and input text are resolved (see invocation modes above), proce
 
 Open the resolved config and load every field. The schema is documented in `SCHEMA.md` next to this file. Every field is meaningful — don't skim.
 
+**If a heuristic field is unset, treat it as "preserve the source's value for this dimension" — do not invent a default.** This applies to `mood`, `register`, `verbosity`, and `depth`. Required fields (`environment`, `audience`, `goal`, `constraints`) are always present.
+
 Pay particular attention to:
 - `heuristic.constraints` — must-do rules. Apply all of them.
 - `heuristic.forbidden` — must-not-do rules. Honor all of them.

@@ -1,0 +1,36 @@
+name: corrective-passive-peer
+description: Indirect, question-led correction or pushback to a peer; passive-aggressive subtext allowed when the concern must register without rank or confrontation
+heuristic:
+  environment: work
+  audience: peer
+  goal: surface a concern or gap to a peer via hedged, collaborative framing; the specific issue and the implicit ask must remain readable beneath the indirection
+  context:
+    - recipient is at the same organizational level as the sender
+    - sender holds no positional authority over the recipient
+    - sender prefers indirect delivery (cultural, relational, or political reasons)
+    - the critique must land on shared goals or professional norms — not rank
+  mood: neutral
+  register: passive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - frame the concern as a shared question or observation ("I want to make sure we're aligned on", "I noticed", "might be worth us revisiting")
+    - anchor the concern in shared impact (team, project, customer) rather than personal authority
+    - the specific gap, the cited impact, and the implicit ask must remain clearly readable beneath the hedging
+    - allow passive-aggressive subtext when needed for the message to land — keep it directed at the work product or decision, not the person
+    - close with a soft collaborative prompt: a question, a suggestion to discuss, or an offer to look at it together
+    - critique the decision, output, or process — never the person
+  forbidden:
+    - rank-pulling or authority claims
+    - personal attacks, name-calling, profanity, slurs
+    - sarcasm or contempt directed at the person
+    - references to protected classes
+    - hedging so heavy the gap, impact, or ask disappears
+    - sanitizing the message into agreement or pure encouragement that misrepresents the sender's concern
+    - "just asking questions" framing used as a covert accusation
+    - direct ultimatums, explicit threats, or overt escalation threats as pressure
+    - language construable as harassment, discrimination, or hostile work environment
+output:
+  format: prose
+  target_length: 100-130% of input

@@ -1,0 +1,39 @@
+name: corrective-aggressive-peer
+description: Direct, lateral pushback or correction to a peer; relies on shared goals and mutual accountability rather than positional authority
+heuristic:
+  environment: work
+  audience: peer
+  goal: correct a peer's decision, output, or behavior via direct, impact-led framing; close with a concrete joint path forward
+  context:
+    - recipient is at the same organizational level as the sender
+    - sender holds no positional authority over the recipient
+    - the critique must land on shared goals, project impact, or professional norms — not rank
+  mood: urgent
+  register: aggressive
+  verbosity: standard
+  depth: detailed
+  constraints:
+    - preserve all factual claims from the input
+    - lead with the specific gap, bad decision, or missed detail — not a preamble
+    - anchor the critique in shared impact (team, project, customer, deadline) rather than personal authority
+    - name the concrete risk or cost if the issue isn't addressed
+    - propose a specific fix, alternative, or next step — do not just flag the problem
+    - close with a clear joint ask: a decision, a rework, a sync, or a commitment
+    - critique the decision, output, or process — never the person
+    - state each instruction once; do not pile on or repeat for emphasis
+    - calibrate to "direct and firm, holding the line on quality" — not contemptuous; aim for roughly 70% of maximum aggressive intensity
+    - phrase gates as conditions ("once X is confirmed, we move"), not bare refusals
+  forbidden:
+    - rank-pulling or authority claims ("as the senior person here", "I've been here longer")
+    - personal attacks, name-calling, profanity, slurs
+    - sarcasm or contempt directed at the person
+    - references to protected classes
+    - threats — explicit or implied — of escalation to management as a pressure tactic rather than a genuine next step
+    - praise sandwiches and softening hedges that dilute the critique
+    - generic feedback that doesn't reference a specific gap
+    - stacked imperatives directed at the person
+    - dismissive rhetorical kickers ("figure it out", "not my problem")
+    - catastrophizing without cited evidence
+output:
+  format: prose
+  target_length: 100-130% of input
